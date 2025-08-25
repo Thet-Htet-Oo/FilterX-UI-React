@@ -9,7 +9,7 @@
 }
 
 .ls-container {
-  background: #263041;
+  background-color: rgb(227, 230, 236);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
 .ls-main-container {
   background-color: #222;
   border-radius: 30px;
-  box-shadow: 0 0 20px #d4af37;
+  box-shadow: 0 0 20px #ff6f20;
   position: relative;
   overflow: hidden;
   width: 768px;
@@ -89,14 +89,17 @@
 }
 
 .ls-main-container a {
-  color: #d4af37;
-  font-size: 13px;
+  color: #ff6f20;
+  font-size: 0.9rem;
   text-decoration: none;
-  margin: 15px 0 10px;
+}
+
+.forget:hover{
+  text-decoration: underline;
 }
 
 .ls-main-container button {
-  background-color: #d4af37;
+  background-color: #ff6f20;
   color: #fff;
   font-size: 12px;
   padding: 10px 45px;
@@ -108,10 +111,12 @@
   margin-top: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .ls-main-container button:hover {
-  background-color: #d4af37;
+  color: #000000;
+  background-color: #ff5900;
 }
 
 .ls-main-container button.ls-hidden {
@@ -122,7 +127,7 @@
 .ls-main-container form {
   background-color: #222;
   display: flex;
-  align-items: center;
+  
   justify-content: center;
   flex-direction: column;
   padding: 0 40px;
@@ -144,7 +149,7 @@
 }
 
 .ls-main-container input:focus {
-  box-shadow: 0 0 8px #d4af37;
+  box-shadow: 0 0 8px #ff6f20;
   transform: scale(1.02);
   background-color: #2a2a2a;
 }
@@ -221,15 +226,24 @@
   z-index: 1000;
 }
 
+.ls-toggle-container button{
+  width: 50%;
+}
+
+.ls-toggle-container button:hover{
+  background-color: #eee;
+  color: #333;
+}
+
 .ls-main-container.ls-active .ls-toggle-container {
   transform: translateX(-100%);
   border-radius: 0 150px 100px 0;
 }
 
 .ls-toggle {
-  background-color: #d4af37;
+  background-color: #ff6f20;
   height: 100%;
-  background: #d4af37;
+  background: #ff6f20;
   color: #fff;
   position: relative;
   left: -100%;
@@ -279,3 +293,6 @@
   margin-top: 5px;
   color: #eee;
 }
+
+
+

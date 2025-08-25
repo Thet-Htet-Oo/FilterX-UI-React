@@ -51,7 +51,7 @@ export default function LoginSignup() {
               value={loginPassword} 
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-            <a href="#">Forget Your Password?</a>
+            <a href="#" className="forget">Forget Your Password?</a>
             <button type="submit">Log In</button>
           </form>
         </div>
