@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./home.css";
@@ -82,46 +83,40 @@ function Home() {
     <div className="hp-container">
       <div className="hp-home d-flex flex-column min-vh-100">
         {/* Navbar */}
-        <nav className="hp-navbar navbar navbar-expand-lg hp-navbar-custom">
-          <div className="container-fluid px-4">
-            <a className="hp-navbar-brand navbar-brand" href="#">
-              <i className="bi bi-mortarboard-fill"></i> Filter X
-            </a>
-            <button
-              className="hp-navbar-toggler navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i
-                className="bi bi-list"
-                style={{ color: "var(--hp-gold)", fontSize: "1.25rem" }}
-              ></i>
-            </button>
+        <nav className="navbar navbar-expand-lg hp-navbar-custom"
+      style={{ position: "sticky", top: 0, zIndex: 1030 }} >
+        <div className="container">
+          <Link className="hp-navbar-brand navbar-brand"  to="/">
+            <i className="bi bi-mortarboard-fill"></i> Filter X
+          </Link>
+        <button
+          className="hp-navbar-toggler navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation" >
+        <i className="bi bi-list"
+          style={{ color: "var(--hp-gold)", fontSize: "1.25rem" }}
+        ></i>
+        </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="hp-navbar-nav navbar-nav ms-auto align-items-lg-center">
                 <li className="hp-nav-item nav-item">
-                  <a className="hp-nav-link nav-link active" href="#">
+                  <Link className="hp-nav-link nav-link" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="hp-nav-item nav-item">
-                  <a className="hp-nav-link nav-link" href="#">
-                    Courses
-                  </a>
+                  <Link className="hp-nav-link nav-link" to="/about">
+                    About
+                  </Link>
                 </li>
                 <li className="hp-nav-item nav-item">
-                  <a className="hp-nav-link nav-link" href="#">
-                    Resources
-                  </a>
-                </li>
-                <li className="hp-nav-item nav-item">
-                  <a className="hp-nav-link nav-link" href="#">
+                  <Link className="hp-nav-link nav-link" to="#">
                     Profile
-                  </a>
+                  </Link>
                 </li>
                 <li className="hp-nav-item nav-item">
                   <a className="hp-nav-link nav-link" href="#" onClick={handleLogout}>
@@ -132,6 +127,8 @@ function Home() {
             </div>
           </div>
         </nav>
+
+
 
         <main className="hp-main container-fluid flex-grow-1 py-3 d-flex flex-column">
           <div className="hp-content-wrapper">

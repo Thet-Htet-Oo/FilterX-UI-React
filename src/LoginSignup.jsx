@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
-import "./LoginSignup.css"; // Make sure this matches your CSS file name
+import { Link } from "react-router-dom";
+import "./LoginSignup.css"; 
 
 export default function LoginSignup() {
   const [active, setActive] = useState(false);
